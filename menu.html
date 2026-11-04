@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Smart QR Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-qrcode"></i> Smart QR Restaurant
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="menu.html">Menu</a></li>
+                <li><a href="kitchen-dashboard.html">Kitchen</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-cart" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="table-selection-section">
+            <div class="table-selection-card">
+                <div class="table-selection-group">
+                    <label for="tableSelect">Select Table</label>
+                    <div class="table-selection-input-wrap">
+                        <input type="number" id="tableSelect" min="1" max="99" placeholder="Enter table number" />
+                        <button class="btn btn-secondary" onclick="selectTable()">Set Table</button>
+                    </div>
+                </div>
+                <div class="table-selection-status">
+                    <span>Selected Table</span>
+                    <strong id="activeTableDisplay">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="section-header">
+                <h2><i class="fas fa-utensils"></i> Featured Foods</h2>
+                <p>Top three picks with the most selected item highlighted in green.</p>
+            </div>
+            <div id="featuredFoodsGrid" class="featured-grid"></div>
+        </section>
+
+        <section class="menu-section">
+            <!-- Filters and Search -->
+            <div class="filters-section">
+                <input type="text" id="searchInput" class="search-box" placeholder="Search dishes...">
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterMenu('all')">All</button>
+                    <button class="filter-btn" onclick="filterMenu('vegetarian')">
+                        <i class="fas fa-leaf"></i> Veg
+                    </button>
+                    <button class="filter-btn" onclick="filterMenu('nonveg')">Non-Veg</button>
+                    <button class="filter-btn" onclick="filterMenu('drinks')">Drinks</button>
+                    <button class="filter-btn" onclick="filterMenu('desserts')">Desserts</button>
+                </div>
+
+                <div class="sort-section">
+                    <label>Sort by:</label>
+                    <select id="sortBy" onchange="sortMenu()">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div id="menuGrid" class="menu-grid">
+                <!-- Menu items will be loaded here -->
+            </div>
+        </section>
+
+        <!-- AI Recommendations Section -->
+        <section class="recommendations-section">
+            <h2><i class="fas fa-robot"></i> AI Recommendations for You</h2>
+            <div id="recommendationsGrid" class="menu-grid">
+                <!-- Recommendations will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Fast Food Section -->
+        <section class="fast-food-section">
+            <div class="section-header">
+                <h2><i class="fas fa-hamburger"></i> Fast Food Favorites</h2>
+                <p>Quick bites and tasty treats ready to order.</p>
+            </div>
+            <div id="fastFoodGrid" class="menu-grid">
+                <!-- Fast food items will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Cold Drinks Section -->
+        <section class="cold-drinks-section">
+            <div class="section-header">
+                <h2><i class="fas fa-cocktail"></i> Cold Drinks</h2>
+                <p>Chilled beverages to refresh your meal.</p>
+            </div>
+            <div id="coldDrinksGrid" class="menu-grid">
+                <!-- Cold drink items will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Combo Suggestions -->
+        <section class="combos-section">
+            <h2><i class="fas fa-star"></i> Smart Combo Deals</h2>
+            <div id="combosGrid" class="combos-grid">
+                <!-- Combos will be loaded here -->
+            </div>
+        </section>
+
+        <!-- AI Chatbot Widget -->
+        <button class="chatbot-toggle" onclick="toggleChatbot()">
+            <i class="fas fa-comments"></i>
+        </button>
+
+        <!-- Chatbot -->
+        <div id="chatbot" class="chatbot">
+            <div class="chatbot-header">
+                <h3>AI Assistant</h3>
+                <button onclick="toggleChatbot()" class="close-btn">&times;</button>
+            </div>
+            <div id="chatMessages" class="chat-messages"></div>
+            <div class="chat-input-section">
+                <input type="text" id="chatInput" placeholder="Ask me anything..." onkeypress="handleChatInput(event)">
+                <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Voice Ordering -->
+        <button class="voice-btn" onclick="startVoiceOrder()">
+            <i class="fas fa-microphone"></i> Voice Order
+        </button>
+
+        <!-- Cart Sidebar -->
+        <div id="cartSidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Order</h3>
+                <button onclick="toggleCart()" class="close-btn">&times;</button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax (5%):</span>
+                    <span id="tax">₹0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total:</span>
+                    <span id="total">₹0</span>
+                </div>
+                <button class="btn btn-primary btn-full" onclick="proceedToPayment()">
+                    <i class="fas fa-credit-card"></i> Quick Payment
+                </button>
+                <button class="btn btn-secondary btn-full" onclick="proceedToPayment()" style="margin-top: 10px;">
+                    <i class="fas fa-wallet"></i> Proceed to Payment
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Smart QR Restaurant. Enjoy your meal!</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ai-engine.js"></script>
+    <script src="js/menu-data.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/voice-ordering.js"></script>
+</body>
+</html>

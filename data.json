@@ -1,0 +1,482 @@
+{
+  "orders": [
+    {
+      "tableNumber": "1",
+      "items": [
+        {
+          "id": 1,
+          "name": "Paneer Tikka",
+          "category": "vegetarian",
+          "type": "starter",
+          "price": 250,
+          "description": "Soft paneer cubes marinated and grilled",
+          "emoji": "🔶",
+          "rating": 4.8,
+          "popularity": 95,
+          "tags": [
+            "popular",
+            "spicy",
+            "protein"
+          ],
+          "quantity": 2,
+          "done": false
+        },
+        {
+          "id": 15,
+          "name": "Cold Coffee",
+          "category": "drinks",
+          "type": "beverage",
+          "price": 160,
+          "description": "Creamy chilled coffee drink",
+          "emoji": "☕",
+          "rating": 4.7,
+          "popularity": 90,
+          "tags": [
+            "refreshing",
+            "cold"
+          ],
+          "quantity": 1,
+          "done": false
+        }
+      ],
+      "total": 660,
+      "status": "pending",
+      "paymentMethod": "waiting",
+      "id": 1,
+      "timestamp": "2026-09-29T10:00:00.000Z",
+      "createdAt": "2026-09-29T10:00:00.000Z"
+    },
+    {
+      "tableNumber": "3",
+      "items": [
+        {
+          "id": 6,
+          "name": "Paneer Butter Masala",
+          "category": "vegetarian",
+          "type": "main",
+          "price": 300,
+          "description": "Soft paneer in creamy tomato sauce",
+          "emoji": "🍲",
+          "rating": 4.9,
+          "popularity": 100,
+          "tags": [
+            "popular",
+            "creamy",
+            "must-try"
+          ],
+          "quantity": 1,
+          "done": false
+        },
+        {
+          "id": 9,
+          "name": "Butter Naan",
+          "category": "vegetarian",
+          "type": "bread",
+          "price": 60,
+          "description": "Soft naan brushed with butter",
+          "emoji": "🫓",
+          "rating": 4.7,
+          "popularity": 88,
+          "tags": [
+            "baked",
+            "classic"
+          ],
+          "quantity": 2,
+          "done": false
+        }
+      ],
+      "total": 420,
+      "status": "preparing",
+      "paymentMethod": "waiting",
+      "id": 2,
+      "timestamp": "2026-09-29T10:15:00.000Z",
+      "createdAt": "2026-09-29T10:15:00.000Z"
+    },
+    {
+      "tableNumber": "5",
+      "items": [
+        {
+          "id": 4,
+          "name": "Chicken Biryani",
+          "category": "nonveg",
+          "type": "main",
+          "price": 350,
+          "description": "Fragrant biryani with tender chicken",
+          "emoji": "🍛",
+          "rating": 4.8,
+          "popularity": 98,
+          "tags": [
+            "popular",
+            "spicy"
+          ],
+          "quantity": 1,
+          "done": false
+        },
+        {
+          "id": 12,
+          "name": "Gulab Jamun",
+          "category": "desserts",
+          "type": "dessert",
+          "price": 140,
+          "description": "Soft milk-solid sweets soaked in saffron syrup",
+          "emoji": "🍮",
+          "rating": 4.9,
+          "popularity": 96,
+          "tags": [
+            "sweet",
+            "dessert"
+          ],
+          "quantity": 2,
+          "done": false
+        }
+      ],
+      "total": 630,
+      "status": "ready",
+      "paymentMethod": "waiting",
+      "id": 3,
+      "timestamp": "2026-09-29T10:25:00.000Z",
+      "createdAt": "2026-09-29T10:25:00.000Z"
+    },
+    {
+      "tableNumber": "7",
+      "items": [
+        {
+          "id": 26,
+          "name": "Veg Cheese Pizza",
+          "category": "vegetarian",
+          "type": "fastfood",
+          "price": 260,
+          "description": "Classic cheesy pizza with tomato sauce and veggies",
+          "emoji": "🍕",
+          "rating": 4.6,
+          "popularity": 93,
+          "tags": [
+            "fast food",
+            "cheesy"
+          ],
+          "quantity": 1,
+          "done": false
+        }
+      ],
+      "total": 273,
+      "status": "served",
+      "paymentMethod": "waiting",
+      "id": 4,
+      "timestamp": "2026-09-29T10:40:00.000Z",
+      "createdAt": "2026-09-29T10:40:00.000Z"
+    },
+    {
+      "tableNumber": 33,
+      "items": [
+        {
+          "id": 9,
+          "name": "Butter Chicken",
+          "category": "nonveg",
+          "type": "main",
+          "price": 380,
+          "description": "Tender chicken in creamy tomato sauce",
+          "emoji": "🍗",
+          "rating": 4.9,
+          "popularity": 100,
+          "tags": [
+            "popular",
+            "creamy",
+            "must-try"
+          ],
+          "image": "assets/Butter chicken 🍗🍛.jpg",
+          "quantity": 1,
+          "done": false
+        },
+        {
+          "id": 3,
+          "name": "Chikhalwali",
+          "category": "vegetarian",
+          "type": "starter",
+          "price": 120,
+          "description": "Garlic bread with herb butter",
+          "emoji": "🥒",
+          "rating": 4.5,
+          "popularity": 70,
+          "tags": [
+            "bread"
+          ],
+          "image": "assets/Handmade Chakli, Savory Indian Snack.jpg",
+          "quantity": 1,
+          "done": false
+        },
+        {
+          "id": 2,
+          "name": "Samosa",
+          "category": "vegetarian",
+          "type": "starter",
+          "price": 80,
+          "description": "Crispy pastry with spiced potato filling",
+          "emoji": "📦",
+          "rating": 4.6,
+          "popularity": 85,
+          "tags": [
+            "crispy",
+            "snack"
+          ],
+          "image": "assets/Crispy Aloo Samosa.jpg",
+          "quantity": 2,
+          "done": false
+        },
+        {
+          "id": 14,
+          "name": "Mango Lassi",
+          "category": "drinks",
+          "type": "beverage",
+          "price": 120,
+          "description": "Yogurt drink with mango pulp",
+          "emoji": "🥤",
+          "rating": 4.8,
+          "popularity": 92,
+          "tags": [
+            "refreshing",
+            "yogurt"
+          ],
+          "image": "assets/mango rose lassi frothy_ A Tropical Escape Awaits.jpg",
+          "quantity": 1,
+          "done": false
+        }
+      ],
+      "total": 819,
+      "status": "pending",
+      "paymentMethod": "waiting",
+      "id": 5,
+      "timestamp": "2026-09-28T18:48:05.745Z",
+      "createdAt": "2026-09-28T18:48:05.872Z"
+    },
+    {
+      "tableNumber": 33,
+      "items": [
+        {
+          "id": 4,
+          "name": "Chicken Tikka",
+          "category": "nonveg",
+          "type": "starter",
+          "price": 320,
+          "description": "Juicy chicken pieces marinated and grilled",
+          "emoji": "🍗",
+          "rating": 4.9,
+          "popularity": 98,
+          "tags": [
+            "popular",
+            "spicy",
+            "protein"
+          ],
+          "image": "assets/Chicken Tikka Kebabs.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 9,
+          "name": "Butter Chicken",
+          "category": "nonveg",
+          "type": "main",
+          "price": 380,
+          "description": "Tender chicken in creamy tomato sauce",
+          "emoji": "🍗",
+          "rating": 4.9,
+          "popularity": 100,
+          "tags": [
+            "popular",
+            "creamy",
+            "must-try"
+          ],
+          "image": "assets/Butter chicken 🍗🍛.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "name": "Chicken Biryani",
+          "category": "nonveg",
+          "type": "main",
+          "price": 350,
+          "description": "Fragrant rice cooked with chicken and spices",
+          "emoji": "🍚",
+          "rating": 4.8,
+          "popularity": 96,
+          "tags": [
+            "rice",
+            "aromatic",
+            "popular"
+          ],
+          "image": "assets/download (9).jpg",
+          "quantity": 1
+        },
+        {
+          "id": 15,
+          "name": "Cold Coffee",
+          "category": "drinks",
+          "type": "beverage",
+          "price": 150,
+          "description": "Iced coffee with cream",
+          "emoji": "☕",
+          "rating": 4.7,
+          "popularity": 85,
+          "tags": [
+            "cold",
+            "coffee"
+          ],
+          "image": "assets/Cafe Style Cold Coffee.jpg",
+          "quantity": 1
+        }
+      ],
+      "total": 1260,
+      "status": "pending",
+      "paymentMethod": "waiting",
+      "id": 6,
+      "timestamp": "2026-09-28T18:48:36.632Z",
+      "createdAt": "2026-09-28T18:48:36.640Z"
+    },
+    {
+      "tableNumber": "70",
+      "items": [
+        {
+          "id": 9,
+          "name": "Butter Chicken",
+          "category": "nonveg",
+          "type": "main",
+          "price": 380,
+          "description": "Tender chicken in creamy tomato sauce",
+          "emoji": "🍗",
+          "rating": 4.9,
+          "popularity": 100,
+          "tags": [
+            "popular",
+            "creamy",
+            "must-try"
+          ],
+          "image": "assets/Butter chicken 🍗🍛.jpg",
+          "quantity": 1,
+          "done": false
+        },
+        {
+          "id": 3,
+          "name": "Chikhalwali",
+          "category": "vegetarian",
+          "type": "starter",
+          "price": 120,
+          "description": "Garlic bread with herb butter",
+          "emoji": "🥒",
+          "rating": 4.5,
+          "popularity": 70,
+          "tags": [
+            "bread"
+          ],
+          "image": "assets/Handmade Chakli, Savory Indian Snack.jpg",
+          "quantity": 1,
+          "done": false
+        }
+      ],
+      "total": 525,
+      "status": "pending",
+      "paymentMethod": "waiting",
+      "id": 7,
+      "timestamp": "2026-09-28T18:54:05.287Z",
+      "createdAt": "2026-09-28T18:54:05.293Z"
+    },
+    {
+      "tableNumber": "33",
+      "items": [
+        {
+          "id": 22,
+          "name": "Chicken Burger",
+          "category": "nonveg",
+          "type": "fastfood",
+          "price": 280,
+          "description": "Grilled chicken burger with special sauce",
+          "emoji": "🍔",
+          "rating": 4.8,
+          "popularity": 94,
+          "tags": [
+            "fast food",
+            "spicy"
+          ],
+          "group": "fast-food",
+          "image": "assets/Redirect Notice.jpg",
+          "quantity": 1,
+          "done": false
+        },
+        {
+          "id": 23,
+          "name": "Iced Tea",
+          "category": "drinks",
+          "type": "beverage",
+          "price": 110,
+          "description": "Refreshing iced tea with lemon",
+          "emoji": "🧊",
+          "rating": 4.5,
+          "popularity": 83,
+          "tags": [
+            "cold",
+            "refreshing"
+          ],
+          "group": "cold-drinks",
+          "image": "assets/download (12).jpg",
+          "quantity": 1,
+          "done": false
+        },
+        {
+          "id": 17,
+          "name": "Gulab Jamun",
+          "category": "desserts",
+          "type": "dessert",
+          "price": 140,
+          "description": "Soft milk solids in sugar syrup",
+          "emoji": "🍮",
+          "rating": 4.9,
+          "popularity": 95,
+          "tags": [
+            "sweet",
+            "traditional"
+          ],
+          "image": "assets/_Golden Gulab Jamun Bliss_.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 18,
+          "name": "Kheer",
+          "category": "desserts",
+          "type": "dessert",
+          "price": 120,
+          "description": "Rice pudding with milk and nuts",
+          "emoji": "🥛",
+          "rating": 4.8,
+          "popularity": 90,
+          "tags": [
+            "sweet",
+            "creamy"
+          ],
+          "image": "assets/Pakistani sweet dish kheer.jpg",
+          "quantity": 1
+        },
+        {
+          "id": 19,
+          "name": "Ice Cream Sundae",
+          "category": "desserts",
+          "type": "dessert",
+          "price": 180,
+          "description": "Vanilla ice cream with toppings",
+          "emoji": "🍨",
+          "rating": 4.7,
+          "popularity": 88,
+          "tags": [
+            "cold",
+            "sweet"
+          ],
+          "image": "assets/Ice cream.jpg",
+          "quantity": 1
+        }
+      ],
+      "total": 871.5,
+      "status": "pending",
+      "paymentMethod": "waiting",
+      "id": 8,
+      "timestamp": "2026-09-28T18:57:22.153Z",
+      "createdAt": "2026-09-28T18:57:22.164Z"
+    }
+  ],
+  "nextOrderId": 9
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart QR Restaurant - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-qrcode"></i> Smart QR Restaurant
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="kitchen-dashboard.html">Kitchen</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Smart QR Restaurant</h1>
+                <p>Scan the QR code at your table to get started</p>
+                
+                <div class="action-container">
+                    <button class="btn btn-primary btn-lg" onclick="startQRScan()">
+                        <i class="fas fa-camera"></i> Scan QR Code
+                    </button>
+                    <p class="or-text">OR</p>
+                    <input type="text" id="tableInput" class="table-input" placeholder="Enter Table Number">
+                    <button class="btn btn-secondary btn-lg" onclick="enterTableNumber()">
+                        <i class="fas fa-door-open"></i> Enter Table
+                    </button>
+                    <button class="btn btn-info btn-lg" onclick="window.location.href='login.html'">
+                        <i class="fas fa-user-circle"></i> Login / Register
+                    </button>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card feature-card-link" onclick="window.open('menu.html', '_blank')">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Digital Menu</h3>
+                        <p>View complete menu instantly</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI Recommendations</h3>
+                        <p>Personalized food suggestions</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-microphone"></i>
+                        <h3>Voice Ordering</h3>
+                        <p>Order with your voice</p>
+                    </div>
+                    <div class="feature-card feature-card-link" onclick="window.location.href='menu.html'">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Quick Payment</h3>
+                        <p>Easy checkout process</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QR Scanner Modal -->
+        <div id="qrModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Scan QR Code</h2>
+                <video id="qrVideo" width="300" height="300" style="border: 2px solid #ff6b6b;"></video>
+                <p id="qrResult"></p>
+            </div>
+        </div>
+
+        <!-- Health Check Modal -->
+        <div id="healthModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeHealthModal()">&times;</span>
+                <h2>Health Check Before Ordering</h2>
+                <p>We care about your health! Please answer these quick questions:</p>
+                <form id="healthForm">
+                    <div class="form-group">
+                        <label>Any allergies?</label>
+                        <input type="text" id="allergies" placeholder="Enter allergies (comma separated)">
+                    </div>
+                    <div class="form-group">
+                        <label>Any dietary restrictions?</label>
+                        <select id="dietary">
+                            <option value="none">None</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="glutenfree">Gluten Free</option>
+                            <option value="dairyfree">Dairy Free</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Any health conditions we should know?</label>
+                        <input type="text" id="conditions" placeholder="e.g., Diabetes, Heart condition">
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="submitHealthCheck()">Continue to Menu</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Smart QR Restaurant Management System. Serving with care.</p>
+    </footer>
+
+    <script src="js/qr-scanner.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

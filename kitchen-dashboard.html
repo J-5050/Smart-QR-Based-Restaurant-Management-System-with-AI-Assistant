@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Dashboard - Smart QR Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kitchen-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar kitchen-navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-fire"></i> Kitchen Dashboard
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a class="active" href="kitchen-dashboard.html">Kitchen</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span class="timestamp" id="timestamp"></span>
+                <span class="order-count">Orders: <span id="orderCount">0</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="kitchen-container">
+        <!-- Statistics Panel -->
+        <div class="stats-panel">
+            <div class="stat-card">
+                <i class="fas fa-hourglass-start"></i>
+                <div>
+                    <h4>Pending</h4>
+                    <span class="stat-number" id="pendingCount">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-spinner"></i>
+                <div>
+                    <h4>Preparing</h4>
+                    <span class="stat-number" id="preparingCount">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-check-circle"></i>
+                <div>
+                    <h4>Ready</h4>
+                    <span class="stat-number" id="readyCount">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-checkmark"></i>
+                <div>
+                    <h4>Served</h4>
+                    <span class="stat-number" id="servedCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Board -->
+        <div class="orders-board">
+            <!-- Pending Orders -->
+            <div class="order-column">
+                <h3><i class="fas fa-hourglass-start"></i> Pending Orders</h3>
+                <div id="pendingOrders" class="orders-list">
+                    <!-- Orders will be added here -->
+                </div>
+            </div>
+
+            <!-- Preparing Orders -->
+            <div class="order-column">
+                <h3><i class="fas fa-spinner"></i> Preparing</h3>
+                <div id="preparingOrders" class="orders-list">
+                    <!-- Orders will be added here -->
+                </div>
+            </div>
+
+            <!-- Ready Orders -->
+            <div class="order-column">
+                <h3><i class="fas fa-check-circle"></i> Ready to Serve</h3>
+                <div id="readyOrders" class="orders-list">
+                    <!-- Orders will be added here -->
+                </div>
+            </div>
+
+            <!-- Completed Orders -->
+            <div class="order-column">
+                <h3><i class="fas fa-checkmark"></i> Served</h3>
+                <div id="servedOrders" class="orders-list">
+                    <!-- Orders will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Details Modal -->
+        <div id="orderDetailsModal" class="modal">
+            <div class="modal-content order-details">
+                <span class="close" onclick="closeOrderDetails()">&times;</span>
+                <h2>Order #<span id="modalOrderId"></span></h2>
+                <div class="order-meta">
+                    <span>Table: <strong id="modalTableNum"></strong></span>
+                    <span>Time: <strong id="modalOrderTime"></strong></span>
+                </div>
+                <div id="modalOrderItems" class="modal-items">
+                    <!-- Items will be displayed here -->
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" onclick="updateOrderStatus('preparing')">
+                        <i class="fas fa-spinner"></i> Start Preparing
+                    </button>
+                    <button class="btn btn-success" onclick="updateOrderStatus('ready')">
+                        <i class="fas fa-check-circle"></i> Mark Ready
+                    </button>
+                    <button class="btn btn-info" onclick="updateOrderStatus('served')">
+                        <i class="fas fa-checkmark"></i> Mark Served
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/kitchen-dashboard.js"></script>
+</body>
+</html>
